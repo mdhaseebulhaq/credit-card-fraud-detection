@@ -16,16 +16,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# Load trained model pipeline
-model = joblib.load("fraud_detection_pipeline.pkl")
+import os
+import joblib
 
-# Load feature names
-feature_columns = joblib.load("feature_columns.pkl")
-# Load reference transaction
-reference_transaction = joblib.load(
-    "reference_transaction.pkl"
-)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+model = joblib.load(os.path.join(BASE_DIR, "fraud_detection_pipeline.pkl"))
+feature_columns = joblib.load(os.path.join(BASE_DIR, "feature_columns.pkl"))
+reference_transaction = joblib.load(os.path.join(BASE_DIR, "reference_transaction.pkl"))
 
 # Home route
 @app.get("/")
