@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fraud Detection AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🛡️ Fraud Detection AI</h1>
+            <p>Analyze credit card transactions using Machine Learning</p>
+        </header>
+
+        <main>
+
+            <div class="card">
+
+                <h2>Transaction Analysis</h2>
+
+                <p class="subtitle">
+                    Enter transaction details and let AI analyze the fraud risk.
+                </p>
+
+                <label>Transaction Amount</label>
+                <input
+                    type="number"
+                    id="TransactionAmt"
+                    placeholder="Enter transaction amount"
+                    step="0.01"
+                >
+
+                <label>Product Code</label>
+                <select id="ProductCD">
+                    <option value="W">W</option>
+                    <option value="C">C</option>
+                    <option value="H">H</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                </select>
+
+                <label>Card Type</label>
+                <select id="card4">
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="american express">American Express</option>
+                    <option value="discover">Discover</option>
+                </select>
+
+                <label>Card Category</label>
+                <select id="card6">
+                    <option value="credit">Credit</option>
+                    <option value="debit">Debit</option>
+                    <option value="debit or credit">Debit or Credit</option>
+                </select>
+
+                <label>Device Type</label>
+                <select id="DeviceType">
+                    <option value="">Unknown</option>
+                    <option value="desktop">Desktop</option>
+                    <option value="mobile">Mobile</option>
+                </select>
+
+                <button onclick="analyzeTransaction()">
+                    🔍 Analyze Transaction
+                </button>
+
+            </div>
+
+
+            <div class="card result-card" id="resultCard">
+
+                <h2>Analysis Result</h2>
+
+                <div id="result">
+                    <p>Enter transaction details and click Analyze.</p>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
