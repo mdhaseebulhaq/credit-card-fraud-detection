@@ -46,7 +46,7 @@ async function analyzeTransaction() {
 
         // Send request to FastAPI
        const response = await fetch(
-    "https://credit-card-fraud-detection-8-ayxm.onrender.com",
+    "https://credit-card-fraud-detection-8-ayxm.onrender.com/predict",
     {
         method: "POST",
         headers: {
