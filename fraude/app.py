@@ -9,10 +9,12 @@ app = FastAPI(
     description="Machine Learning API for Fraud Detection",
     version="1.0"
 )
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
